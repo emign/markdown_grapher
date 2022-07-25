@@ -4,9 +4,11 @@ on:
     branches:
       - main
 jobs:
-  - name: Publish a Python distribution to PyPI
-    uses: pypa/gh-action-pypi-publish@v1.5.1
-    with:
-      user: __token__
-      password: ${{ secrets.PYPI_API_TOKEN }}
-
+  publish:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Publish a Python distribution to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.5.1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
