@@ -2,7 +2,7 @@ name: Publish a Python distribution to PyPI
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   publish:
     runs-on: ubuntu-18.04
